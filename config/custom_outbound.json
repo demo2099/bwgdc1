@@ -12,6 +12,9 @@
     },
     {
         "protocol": "blackhole",
+        "response": {
+            "type": "http"
+        }
         "tag": "block"
     }
 ]
