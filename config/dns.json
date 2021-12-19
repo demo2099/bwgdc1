@@ -1,6 +1,7 @@
 {
     "servers": [
         "8.8.8.8",
+        "8.8.4.4",
         "localhost"
     ],
     "tag": "dns_inbound"
