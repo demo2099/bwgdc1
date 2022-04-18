@@ -150,12 +150,12 @@ install_XrayR() {
         cp config.yml /etc/XrayR/
 	read -p "How many instances are you want to set up?: " instances
 	counter=1
-	read -p PanelType: PanelType
-	read -p ApiHost: ApiHost
+	read -p "PanelType: " PanelType
+	read -p "ApiHost: " ApiHost
 	while [ $counter -le $instances ]
 	    do
-		read -p ApiKey: ApiKey
-		read -p NodeID: NodeID
+		read -p "ApiKey: " ApiKey
+		read -p "NodeID: " NodeID
 		sed -i "s/SSpanel/$PanelType/" /etc/XrayR/config.yml
 		sed -i "s/127.0.0.1:667/$ApiHost/" /etc/XrayR/config.yml
 		sed -i "s/123/$ApiKey/" /etc/XrayR/config.yml
