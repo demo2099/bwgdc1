@@ -158,8 +158,8 @@ install_XrayR() {
 		read -p NodeID: NodeID
 		sed -i 's/SSpanel/$PanelType/' /etc/XrayR/config.yml
 		sed -i 's/127.0.0.1:667/$ApiHost/' /etc/XrayR/config.yml
-		sed -i 's/123/$ApiKey' /etc/XrayR/config.yml
-		sed -i 's/41/$NodeID' /etc/XrayR/config.yml
+		sed -i 's/123/$ApiKey/' /etc/XrayR/config.yml
+		sed -i 's/41/$NodeID/' /etc/XrayR/config.yml
 		((counter++))
 	    done	
 	
