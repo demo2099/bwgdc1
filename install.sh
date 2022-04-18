@@ -28,7 +28,7 @@ elif cat /proc/version | grep -Eqi "ubuntu"; then
 elif cat /proc/version | grep -Eqi "centos|red hat|redhat"; then
     release="centos"
 else
-    echo -e "${red}未检测到系统版本，请联系脚本作者！${plain}\n" && exit 1
+    echo -e "${red}System version not detected, please contact the script author!${plain}\n" && exit 1
 fi
 
 arch=$(arch)
@@ -39,13 +39,13 @@ elif [[ $arch == "aarch64" || $arch == "arm64" ]]; then
   arch="arm64-v8a"
 else
   arch="64"
-  echo -e "${red}检测架构失败，使用默认架构: ${arch}${plain}"
+  echo -e "${red}Failed to detect schema, use default schema: ${arch}${plain}"
 fi
 
 echo "架构: ${arch}"
 
 if [ "$(getconf WORD_BIT)" != '32' ] && [ "$(getconf LONG_BIT)" != '64' ] ; then
-    echo "本软件不支持 32 位系统(x86)，请使用 64 位系统(x86_64)，如果检测有误，请联系作者"
+    echo "This software does not support 32-bit system (x86), please use 64-bit system (x86_64), if the detection is wrong, please contact the author"
     exit 2
 fi
 
@@ -148,6 +148,21 @@ install_XrayR() {
 
     if [[ ! -f /etc/XrayR/config.yml ]]; then
         cp config.yml /etc/XrayR/
+	read -p "How many instances are you want to set up?: " instances
+	counter=1
+	read -p PanelType: PanelType
+	read -p ApiHost: ApiHost
+	while [ $counter -le $instances ]
+	    do
+		read -p ApiKey: ApiKey
+		read -p NodeID: NodeID
+		sed -i 's/SSpanel/$PanelType/' /etc/XrayR/config.yml
+		sed -i 's/127.0.0.1:667/$ApiHost/' /etc/XrayR/config.yml
+		sed -i 's/123/$ApiKey' /etc/XrayR/config.yml
+		sed -i 's/41/$NodeID' /etc/XrayR/config.yml
+		((counter++))
+	    done	
+	
         echo -e ""
         echo -e "全新安装，请先参看教程：https://github.com/long2k3pro/XrayR，配置必要的内容"
     else
