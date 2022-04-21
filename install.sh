@@ -160,12 +160,12 @@ install_XrayR() {
 		sed -i "s/127.0.0.1:667/$ApiHost/" /etc/XrayR/config.yml
 		sed -i "s/123/$ApiKey/" /etc/XrayR/config.yml
 		sed -i "s/41/$NodeID/" /etc/XrayR/config.yml
-		sed -i 's/dns/file/' /etc/XrayR/config.yml
-		sed -i 's/\.\/cert\/node1\.test\.com\.cert/\/root\/example\.crt/' /etc/XrayR/config.yml
-		sed -i 's/\.\/cert\/node1\.test\.com\.key/\/root\/example\.key/' /etc/XrayR/config.yml
+		sed -i 's/CertMode: dns/CertMode: file/' /etc/XrayR/config.yml
+		sed -i 's/\.\/cert\/node1\.test\.com\.cert/\/etc\/XrayR\/example\.crt/' /etc/XrayR/config.yml
+		sed -i 's/\.\/cert\/node1\.test\.com\.key/\/etc\/XrayR\/example\.key/' /etc/XrayR/config.yml
 		((counter++))
 	    done 
-	openssl req -newkey rsa:2048 -x509 -sha256 -days 365 -nodes -out example.crt -keyout example.key -subj "/C=JP/ST=Tokyo/L=Chiyoda-ku/O=Google Trust Services LLC/CN=google.com"
+	openssl req -newkey rsa:2048 -x509 -sha256 -days 365 -nodes -out /etc/XrayR/example.crt -keyout /etc/XrayR/example.key -subj "/C=JP/ST=Tokyo/L=Chiyoda-ku/O=Google Trust Services LLC/CN=google.com"
 	
         echo -e ""
         echo -e "全新安装，请先参看教程：https://github.com/long2k3pro/XrayR，配置必要的内容"
