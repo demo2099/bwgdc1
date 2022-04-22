@@ -154,12 +154,22 @@ install_XrayR() {
 	read -p "ApiHost: " ApiHost
 	while [ $counter -le $instances ]
 	    do
+        if [ $counter == "2" ]
+        then
+            read -p "ApiKey: " ApiKey2
+		    read -p "NodeID: " NodeID2
+            sed -i "s/SSpanel/$PanelType/" /etc/XrayR/config.yml
+		    sed -i "s/127.0.0.1:667/$ApiHost/" /etc/XrayR/config.yml
+            sed -i "s/123/$ApiKey2/" /etc/XrayR/config.yml
+		    sed -i "s/41/$NodeID2/" /etc/XrayR/config.yml
+        else
 		read -p "ApiKey: " ApiKey
 		read -p "NodeID: " NodeID
 		sed -i "s/SSpanel/$PanelType/" /etc/XrayR/config.yml
 		sed -i "s/127.0.0.1:667/$ApiHost/" /etc/XrayR/config.yml
 		sed -i "s/123/$ApiKey/" /etc/XrayR/config.yml
 		sed -i "s/41/$NodeID/" /etc/XrayR/config.yml
+        fi
 		sed -i 's/CertMode: dns/CertMode: file/' /etc/XrayR/config.yml
 		sed -i 's/\.\/cert\/node1\.test\.com\.cert/\/etc\/XrayR\/example\.crt/' /etc/XrayR/config.yml
 		sed -i 's/\.\/cert\/node1\.test\.com\.key/\/etc\/XrayR\/example\.key/' /etc/XrayR/config.yml
