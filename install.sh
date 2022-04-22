@@ -154,7 +154,7 @@ install_XrayR() {
 	read -p "ApiHost: " ApiHost
 	while [ $counter -le $instances ]
 	    do
-        if [ $counter == "2" ]
+        if [ $counter = 2 ]
         then
             read -p "ApiKey: " ApiKey2
 		    read -p "NodeID: " NodeID2
