@@ -148,7 +148,7 @@ install_XrayR() {
 
     if [[ ! -f /etc/XrayR/config.yml ]]; then
         cp config.yml /etc/XrayR/
-	read -p "How many instances are you want to set up?: " instances
+	read -p "How many instances do you want to set up?: " instances
 	counter=1
 	read -p "PanelType: " PanelType
 	read -p "ApiHost: " ApiHost
