@@ -149,27 +149,30 @@ install_XrayR() {
     if [[ ! -f /etc/XrayR/config.yml ]]; then
         cp config.yml /etc/XrayR/
 	read -p "How many instances do you want to set up?: " instances
-	counter=1
 	read -p "PanelType: " PanelType
 	read -p "ApiHost: " ApiHost
     if (($instances == 2));
     then
-        read -p "ApiKey: " ApiKey
-        read -p "NodeID: " NodeID
+        read -p "ApiKey: " ApiKey1
+        read -p "NodeID: " NodeID1
+        read -p "NodeType: " NodeType1
 		sed -i "s/SSpanel/$PanelType/" /etc/XrayR/config.yml
 		sed -i "s/127.0.0.1:667/$ApiHost/" /etc/XrayR/config.yml
-		sed -i "s/123/$ApiKey/" /etc/XrayR/config.yml
-		sed -i "s/41/$NodeID/" /etc/XrayR/config.yml
+		sed -i "s/123/$ApiKey1/" /etc/XrayR/config.yml
+		sed -i "s/41/$NodeID1/" /etc/XrayR/config.yml
+        sed -i "s/NodeType: V2ray/NodeType: $NodeType1/" /etc/XrayR/config.yml
         sed -i 's/CertMode: dns/CertMode: file/' /etc/XrayR/config.yml
         sed -i 's/\.\/cert\/node1\.test\.com\.cert/\/etc\/XrayR\/example\.crt/' /etc/XrayR/config.yml
         sed -i 's/\.\/cert\/node1\.test\.com\.key/\/etc\/XrayR\/example\.key/' /etc/XrayR/config.yml
     fi
-        read -p "ApiKey: " ApiKey
-        read -p "NodeID: " NodeID
+        read -p "ApiKey: " ApiKey2
+        read -p "NodeID: " NodeID2
+        read -p "NodeType: " NodeType2
 		sed -i "s/SSpanel/$PanelType/" /etc/XrayR/config.yml
 		sed -i "s/127.0.0.1:667/$ApiHost/" /etc/XrayR/config.yml
-		sed -i "s/123/$ApiKey/" /etc/XrayR/config.yml
-		sed -i "s/41/$NodeID/" /etc/XrayR/config.yml
+		sed -i "s/123/$ApiKey2/" /etc/XrayR/config.yml
+		sed -i "s/41/$NodeID2/" /etc/XrayR/config.yml
+        tac /etc/XrayR/config.yml | sed "0,/NodeType: V2ray/{s/NodeType: V2ray/NodeType: $NodeType1/}" |  tac >> /etc/XrayR/config1.yml && rm /etc/XrayR/config.yml && mv /etc/XrayR/config1.yml /etc/XrayR/config.yml
         sed -i 's/CertMode: dns/CertMode: file/' /etc/XrayR/config.yml
         sed -i 's/\.\/cert\/node1\.test\.com\.cert/\/etc\/XrayR\/example\.crt/' /etc/XrayR/config.yml
         sed -i 's/\.\/cert\/node1\.test\.com\.key/\/etc\/XrayR\/example\.key/' /etc/XrayR/config.yml

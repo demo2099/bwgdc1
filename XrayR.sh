@@ -120,16 +120,16 @@ update() {
 }
 
 config() {
-    echo "XrayR在修改配置后会自动尝试重启"
+    echo "XrayR will automatically try to restart after modifying the configuration"
     nano /etc/XrayR/config.yml
     sleep 2
     check_status
     case $? in
         0)
-            echo -e "XrayR状态: ${green}已运行${plain}"
+            echo -e "XrayR Status: ${green} has run ${plain}"
             ;;
         1)
-            echo -e "检测到您未启动XrayR或XrayR自动重启失败，是否查看日志？[Y/n]" && echo
+            echo -e "Detected that you did not start XrayR or XrayR failed to restart automatically, check the log? [Y/n]" && echo
             read -e -p "(默认: y):" yn
             [[ -z ${yn} ]] && yn="y"
             if [[ ${yn} == [Yy] ]]; then
@@ -137,7 +137,7 @@ config() {
             fi
             ;;
         2)
-            echo -e "XrayR状态: ${red}未安装${plain}"
+            echo -e "XrayR Status: ${red} not installed ${plain}"
     esac
 }
 
@@ -192,9 +192,9 @@ stop() {
     sleep 2
     check_status
     if [[ $? == 1 ]]; then
-        echo -e "${green}XrayR 停止成功${plain}"
+        echo -e "${green}XrayR stopped successfully${plain}"
     else
-        echo -e "${red}XrayR停止失败，可能是因为停止时间超过了两秒，请稍后查看日志信息${plain}"
+        echo -e "${red}XrayR failed to stop, maybe because the stop time exceeds two seconds, please check the log information later${plain}"
     fi
 
     if [[ $# == 0 ]]; then
