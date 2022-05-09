@@ -176,6 +176,7 @@ install_XrayR() {
         sed -i '0,/CertMode: dns/{s/CertMode: dns/CertMode: file/}' /etc/XrayR/config.yml
         sed -i '0,/\.\/cert\/node1\.test\.com\.cert/{s/\.\/cert\/node1\.test\.com\.cert/\/etc\/XrayR\/example\.crt/}' /etc/XrayR/config.yml
         sed -i '0,/\.\/cert\/node1\.test\.com\.key/{s/\.\/cert\/node1\.test\.com\.key/\/etc\/XrayR\/example\.key/}' /etc/XrayR/config.yml
+        sed -i '58,99s/  #/  /' /etc/XrayR/config.yml
 	openssl req -newkey rsa:2048 -x509 -sha256 -days 365 -nodes -out /etc/XrayR/example.crt -keyout /etc/XrayR/example.key -subj "/C=JP/ST=Tokyo/L=Chiyoda-ku/O=Google Trust Services LLC/CN=google.com"
 
         echo -e ""
