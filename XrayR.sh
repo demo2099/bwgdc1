@@ -126,7 +126,7 @@ config() {
     check_status
     case $? in
         0)
-            echo -e "XrayR Status: ${green} has run ${plain}"
+            echo -e "XrayR Status: ${green}has run${plain}"
             ;;
         1)
             echo -e "Detected that you did not start XrayR or XrayR failed to restart automatically, check the log? [Y/n]" && echo
@@ -137,7 +137,7 @@ config() {
             fi
             ;;
         2)
-            echo -e "XrayR Status: ${red} not installed ${plain}"
+            echo -e "XrayR Status: ${red}not installed${plain}"
     esac
 }
 
