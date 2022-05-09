@@ -165,9 +165,9 @@ install_XrayR() {
         sed -i 's/\.\/cert\/node1\.test\.com\.cert/\/etc\/XrayR\/example\.crt/' /etc/XrayR/config.yml
         sed -i 's/\.\/cert\/node1\.test\.com\.key/\/etc\/XrayR\/example\.key/' /etc/XrayR/config.yml
     fi
-        read -p "ApiKey: " ApiKey2
-        read -p "NodeID: " NodeID2
-        read -p "NodeType: " NodeType2
+        read -p "ApiKey2: " ApiKey2
+        read -p "NodeID2: " NodeID2
+        read -p "NodeType2: " NodeType2
 		sed -i "s/SSpanel/$PanelType/" /etc/XrayR/config.yml
 		sed -i "s/127.0.0.1:667/$ApiHost/" /etc/XrayR/config.yml
 		sed -i "s/123/$ApiKey2/" /etc/XrayR/config.yml
