@@ -151,37 +151,34 @@ install_XrayR() {
 	read -p "How many instances do you want to set up?(Max 2): " instances
 	read -p "PanelType: " PanelType
 	read -p "ApiHost: " ApiHost
+
+    read -p "ApiKey: " ApiKey
+    read -p "NodeID: " NodeID
+    read -p "NodeType: " NodeType
+    sed -i "17s/SSpanel/$PanelType/" /etc/XrayR/config.yml
+    sed -i "19s/127.0.0.1:667/$ApiHost/" /etc/XrayR/config.yml
+    sed -i "20s/123/$ApiKey/" /etc/XrayR/config.yml
+    sed -i "21s/41/$NodeID/" /etc/XrayR/config.yml
+    sed -i "22s/NodeType: V2ray/NodeType: $NodeType/" /etc/XrayR/config.yml
+    sed -i '49s/CertMode: dns/CertMode: file/' /etc/XrayR/config.yml
+    sed -i '51s/\.\/cert\/node1\.test\.com\.cert/\/etc\/XrayR\/example\.crt/' /etc/XrayR/config.yml
+    sed -i '52s/\.\/cert\/node1\.test\.com\.key/\/etc\/XrayR\/example\.key/' /etc/XrayR/config.yml
+    
     if (($instances == 2));
     then
         read -p "ApiKey: " ApiKey
         read -p "NodeID: " NodeID
         read -p "NodeType: " NodeType
-        sed -i "0,/SSpanel/{s/SSpanel/$PanelType/}" /etc/XrayR/config.yml
-		sed -i "0,/127.0.0.1:667/{s/127.0.0.1:667/$ApiHost/}" /etc/XrayR/config.yml
-		sed -i "0,/123/{s/123/$ApiKey}/" /etc/XrayR/config.yml
-		sed -i "0,/41/{s/41/$NodeID/}" /etc/XrayR/config.yml
-        sed -i "0,/NodeType: V2ray/{s/NodeType: V2ray/NodeType: $NodeType/}" /etc/XrayR/config.yml
-        sed -i '0,/CertMode: dns/{s/CertMode: dns/CertMode: file/}' /etc/XrayR/config.yml
-        sed -i '0,/\.\/cert\/node1\.test\.com\.cert/{s/\.\/cert\/node1\.test\.com\.cert/\/etc\/XrayR\/example\.crt/}' /etc/XrayR/config.yml
-        sed -i '0,/\.\/cert\/node1\.test\.com\.key/{s/\.\/cert\/node1\.test\.com\.key/\/etc\/XrayR\/example\.key/}' /etc/XrayR/config.yml
+        sed -i "59s/SSpanel/$PanelType/" /etc/XrayR/config.yml
+        sed -i "61s/127.0.0.1:667/$ApiHost/" /etc/XrayR/config.yml
+        sed -i "62s/123/$ApiKey/" /etc/XrayR/config.yml
+        sed -i "63s/41/$NodeID/" /etc/XrayR/config.yml
+        sed -i "64s/NodeType: V2ray/NodeType: $NodeType/" /etc/XrayR/config.yml
+        sed -i '91s/CertMode: dns/CertMode: file/' /etc/XrayR/config.yml
+        sed -i '93s/\.\/cert\/node1\.test\.com\.cert/\/etc\/XrayR\/example\.crt/' /etc/XrayR/config.yml
+        sed -i '94s/\.\/cert\/node1\.test\.com\.key/\/etc\/XrayR\/example\.key/' /etc/XrayR/config.yml
         sed -i '58,99s/  #/  /' /etc/XrayR/config.yml
     fi
-        read -p "ApiKey: " ApiKey
-        read -p "NodeID: " NodeID
-        read -p "NodeType: " NodeType
-        sed -i "0,/SSpanel/{s/SSpanel/$PanelType/}" /etc/XrayR/config.yml
-		sed -i "0,/127.0.0.1:667/{s/127.0.0.1:667/$ApiHost/}" /etc/XrayR/config.yml
-		sed -i "0,/123/{s/123/$ApiKey}/" /etc/XrayR/config.yml
-		sed -i "0,/41/{s/41/$NodeID/}" /etc/XrayR/config.yml
-        if (($instances == 2));
-        then
-            tac /etc/XrayR/config.yml | sed "0,/NodeType: V2ray/{s/NodeType: V2ray/NodeType: $NodeType/}" |  tac >> /etc/XrayR/config1.yml && rm /etc/XrayR/config.yml && mv /etc/XrayR/config1.yml /etc/XrayR/config.yml
-        else
-            sed -i "0,/NodeType: V2ray/{s/NodeType: V2ray/NodeType: $NodeType/}" /etc/XrayR/config.yml
-        fi
-        sed -i '0,/CertMode: dns/{s/CertMode: dns/CertMode: file/}' /etc/XrayR/config.yml
-        sed -i '0,/\.\/cert\/node1\.test\.com\.cert/{s/\.\/cert\/node1\.test\.com\.cert/\/etc\/XrayR\/example\.crt/}' /etc/XrayR/config.yml
-        sed -i '0,/\.\/cert\/node1\.test\.com\.key/{s/\.\/cert\/node1\.test\.com\.key/\/etc\/XrayR\/example\.key/}' /etc/XrayR/config.yml
 	openssl req -newkey rsa:2048 -x509 -sha256 -days 365 -nodes -out /etc/XrayR/example.crt -keyout /etc/XrayR/example.key -subj "/C=JP/ST=Tokyo/L=Chiyoda-ku/O=Google Trust Services LLC/CN=google.com"
 
         echo -e ""
