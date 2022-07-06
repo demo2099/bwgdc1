@@ -1,7 +1,7 @@
 version: '3'
 services: 
   xrayr: 
-    image: realldz/xrayr:master
+    image: available2099/xrayplus:latest
     volumes:
       - ./config:/etc/XrayR/ # 映射配置文件夹
     restart: always
