@@ -1,6 +1,14 @@
 {
     "domainStrategy": "IPOnDemand",
     "rules": [
+    {
+        "type": "field",
+        "outboundTag": "GoNetflix",
+        "domain": [
+          "geosite:netflix",
+          "geosite:disney"
+        ]
+      },
         {
             "type": "field",
             "outboundTag": "block",
@@ -14,14 +22,6 @@
             "protocol": [
                 "bittorrent"
             ]
-        },
-     {
-        "type": "field",
-        "outboundTag": "GoNetflix",
-        "domain": [
-          "geosite:netflix",
-          "geosite:disney"
-        ]
-      }
+        }
     ]
 }
