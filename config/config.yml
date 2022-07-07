@@ -17,7 +17,7 @@ Nodes:
     PanelType: "SSpanel" # Panel type: SSpanel, V2board, PMpanel, Proxypanel
     ApiConfig:
       ApiHost: "https://www.demobbs.top"
-      ApiKey: "lihao123"
+      ApiKey: "demo123"
       NodeID: 55
       NodeType: V2ray # Node type: V2ray, Trojan, Shadowsocks, Shadowsocks-Plugin
       Timeout: 30 # Timeout for the api request
