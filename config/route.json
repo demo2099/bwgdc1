@@ -15,12 +15,13 @@
                 "bittorrent"
             ]
         },
-        {
-            "type": "field",
-            "outboundTag": "IPv6_out",
-            "domain": [
-                "geosite:netflix"
-            ]
-        }
+     {
+        "type": "field",
+        "outboundTag": "GoNetflix",
+        "domain": [
+          "geosite:netflix",
+          "geosite:disney"
+        ]
+      }
     ]
 }
