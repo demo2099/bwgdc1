@@ -11,7 +11,17 @@
       },
       {
         "type": "field",
-        "outboundTag": "proxyed",
+        "domain": ["geosite:category-ads-all"],
+        "outboundTag": "block"
+      },
+      {
+        "type": "field",
+        "domain": ["geosite:cn"],
+        "outboundTag": "IPv4_out"
+      },
+      {
+        "type": "field",
+        "outboundTag": "IPv4_out",
         "network": "udp,tcp"
       }
     ]

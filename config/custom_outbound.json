@@ -34,9 +34,9 @@
   },
 
   {
+    "tag": "IPv4_out",
     "protocol": "freedom",
-    "settings": {},
-    "tag": "proxyed"
+    "settings": {}
   },
   {
     "protocol": "blackhole",
