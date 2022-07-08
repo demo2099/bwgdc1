@@ -16,11 +16,6 @@
       },
       {
         "type": "field",
-        "outboundTag": "block",
-        "domain": ["geosite:category-ads-all"]
-      },
-      {
-        "type": "field",
         "outboundTag": "Direct",
         "domain": [
           "geosite:tld-cn",
