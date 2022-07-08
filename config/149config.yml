@@ -154,7 +154,7 @@ Nodes:
       RuleListPath: # ./rulelist Path to local rulelist file
       DisableCustomConfig: false
     ControllerConfig:
-      ListenIP: 0.0.0.0 # IP address you want to listen
+      ListenIP: 127.0.0.1 # IP address you want to listen
       SendIP: 0.0.0.0 # IP address you want to send pacakage
       UpdatePeriodic: 60 # Time to update the nodeinfo, how many sec.
       EnableDNS: true # Use custom DNS config, Please ensure that you set the dns.json well
@@ -163,8 +163,8 @@ Nodes:
       DisableGetRule: false # Disable Get Rule from the panel
       DisableIVCheck: false # Disable the anti-reply protection for Shadowsocks
       DisableSniffing: true
-      EnableProxyProtocol: false # Only works for WebSocket and TCP
-      EnableFallback: false # Only support for Trojan and Vless
+      EnableProxyProtocol: true # Only works for WebSocket and TCP
+      EnableFallback: true # Only support for Trojan and Vless
       FallBackConfigs:  # Support multiple fallbacks
         -
           SNI: # TLS SNI(Server Name Indication), Empty for any
@@ -172,7 +172,7 @@ Nodes:
           Dest: 80 # Required, Destination of fallback, check https://xtls.github.io/config/fallback/ for details.
           ProxyProtocolVer: 0 # Send PROXY protocol version, 0 for dsable
       CertConfig:
-        CertMode: file # Option about how to get certificate: none, file, http, dns. Choose "none" will forcedly disable the tls config.
+        CertMode: none # Option about how to get certificate: none, file, http, dns. Choose "none" will forcedly disable the tls config.
         CertDomain: "chetwohijima.ml" # Domain to cert
         CertFile: /etc/v2ray-agent/tls/chetwohijima.ml.crt # Provided if the CertMode is file
         KeyFile: /etc/v2ray-agent/tls/chetwohijima.ml.key
