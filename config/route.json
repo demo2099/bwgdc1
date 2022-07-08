@@ -16,11 +16,6 @@
       },
       {
         "type": "field",
-        "outboundTag": "Direct",
-        "ip": ["geoip:cn", "geoip:private"]
-      },
-      {
-        "type": "field",
         "outboundTag": "IPv4_out",
         "network": "udp,tcp"
       }
