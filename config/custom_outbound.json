@@ -55,6 +55,17 @@
     }
   },
   {
+    "protocol": "freedom",
+    "tag": "Direct",
+    "settings": {
+      "domainStrategy": "UseIPv4"
+    }
+  },
+  {
+    "protocol": "dns",
+    "tag": "Dns-Out"
+  },
+  {
     "protocol": "blackhole",
     "tag": "block"
   }

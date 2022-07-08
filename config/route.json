@@ -1,37 +1,47 @@
 {
-    "domainStrategy": "IPOnDemand",
+    "domainStrategy": "IPIfNonMatch",
     "rules": [
-    {
+      {
+        "type": "field",
+        "outboundTag": "Direct",
+        "protocol": ["bittorrent"]
+      },
+      {
+        "type": "field",
+        "outboundTag": "block",
+        "domain": ["geosite:category-ads-all"]
+      },
+      {
+        "type": "field",
+        "outboundTag": "Direct",
+        "domain": [
+          "geosite:tld-cn",
+          "geosite:icloud",
+          "geosite:category-games@cn"
+        ]
+      },
+      {
+        "type": "field",
+        "outboundTag": "Direct",
+        "domain": ["geosite:cn", "geosite:private"]
+      },
+      {
+        "type": "field",
+        "outboundTag": "Direct",
+        "ip": ["geoip:cn", "geoip:private"]
+      },
+      {
+        "type": "field",
+        "outboundTag": "IPv4_out",
+        "network": "udp,tcp"
+      },
+      {
         "type": "field",
         "outboundTag": "GoNetflix",
         "domain": [
           "geosite:netflix",
           "geosite:disney"
         ]
-      },
-        {
-            "type": "field",
-            "outboundTag": "block",
-            "protocol": [
-                "bittorrent"
-            ]
-        },
-      {
-        "type": "field",
-        "outboundTag": "socks5-warp",
-        "domain": [""]
-      },
-      {
-        "type": "field",
-        "outboundTag": "IPv6_out",
-        "domain": [
-          "geosite:netflix"
-        ]
-      },
-      {
-        "type": "field",
-        "outboundTag": "IPv4_out",
-        "network": "udp,tcp"
       }
     ]
 }
