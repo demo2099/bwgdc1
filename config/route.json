@@ -3,11 +3,6 @@
     "rules": [
       {
         "type": "field",
-        "outboundTag": "Direct",
-        "protocol": ["bittorrent"]
-      },
-      {
-        "type": "field",
         "outboundTag": "GoNetflix",
         "domain": [
           "geosite:netflix",
@@ -16,7 +11,7 @@
       },
       {
         "type": "field",
-        "outboundTag": "IPv4_out",
+        "outboundTag": "proxyed",
         "network": "udp,tcp"
       }
     ]

@@ -1,8 +1,4 @@
-[  {
-  "tag": "IPv4_out",
-  "protocol": "freedom",
-  "settings": {}
-},
+[
   {
     "tag": "GoNetflix",
     "protocol": "vmess",
@@ -38,14 +34,13 @@
   },
 
   {
-    "tag": "IPv6_out",
     "protocol": "freedom",
-    "settings": {
-      "domainStrategy": "UseIPv6"
-    }
+    "settings": {},
+    "tag": "proxyed"
   },
   {
     "protocol": "blackhole",
+    "settings": {},
     "tag": "block"
   }
 ]
