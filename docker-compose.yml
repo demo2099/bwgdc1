@@ -1,7 +1,7 @@
 version: '3'
 services: 
   xrayr: 
-    image: available2099/xrayplus:latest
+    image: realldz/xrayr:latest
     volumes:
       - ./config:/etc/XrayR/ # 映射配置文件夹
       - /etc/v2ray-agent/tls/:/etc/v2ray-agent/tls/
