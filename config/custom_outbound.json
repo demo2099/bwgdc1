@@ -32,7 +32,32 @@
       ]
     }
   },
-
+ {
+      "protocol": "vmess",
+      "settings": {
+        "vnext": [
+          {
+            "address": "72.19.12.227",
+            "port": 2222,
+            "users": [
+              {
+                "alterId": 0,
+                "id": "28f38ea7-3955-33b8-8ea4-1ac2ad98bc53"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "none",
+        "wsSettings": {
+          "headers": {},
+          "path": "/xlovenf"
+        }
+      },
+      "tag": "72netflix"
+    },
   {
     "tag": "IPv4_out",
     "protocol": "freedom",
