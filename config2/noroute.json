@@ -1,0 +1,38 @@
+{
+  "domainStrategy": "IPOnDemand",
+  "rules": [
+    {
+      "type": "field",
+      "outboundTag": "GoNetflix",
+      "port": "23342,1000-2000",
+      "domain": [
+        "geosite:netflix",
+        "geosite:disney"
+      ]
+    },
+      {
+      "type": "field",
+      "outboundTag": "72netflix",
+      "port": "34744",
+      "domain": [
+        "geosite:netflix",
+        "geosite:disney"
+      ]
+    },
+    {
+      "type": "field",
+      "domain": ["geosite:category-ads-all"],
+      "outboundTag": "block"
+    },
+    {
+      "type": "field",
+      "domain": ["geosite:cn"],
+      "outboundTag": "IPv4_out"
+    },
+    {
+      "type": "field",
+      "outboundTag": "IPv4_out",
+      "network": "udp,tcp"
+    }
+  ]
+}

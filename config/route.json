@@ -4,16 +4,6 @@
      {
       "type": "field",
       "outboundTag": "GoNetflix",
-      "sourcePort": "23342,1000-2000",
-      "domain": [
-        "geosite:netflix",
-        "geosite:disney"
-      ]
-    },
-      {
-      "type": "field",
-      "outboundTag": "72netflix",
-      "sourcePort": "34744",
       "domain": [
         "geosite:netflix",
         "geosite:disney"

@@ -18,7 +18,7 @@ Nodes:
     ApiConfig:
       ApiHost: "https://www.demobbs.top"
       ApiKey: "demo123"
-      NodeID: 57
+      NodeID: 56
       NodeType: V2ray # Node type: V2ray, Trojan, Shadowsocks, Shadowsocks-Plugin
       Timeout: 30 # Timeout for the api request
       EnableVless: false # Enable Vless for V2ray Type
@@ -35,7 +35,7 @@ Nodes:
       DNSType: UseIP # AsIs, UseIP, UseIPv4, UseIPv6, DNS strategy
       DisableUploadTraffic: false # Disable Upload Traffic to the panel
       DisableGetRule: false # Disable Get Rule from the panel
-      DisableIVCheck: false # Disable the anti-reply protection for Shadowsocks 
+      DisableIVCheck: false # Disable the anti-reply protection for Shadowsocks
       DisableSniffing: true
       EnableProxyProtocol: false # Only works for WebSocket and TCP
       EnableFallback: false # Only support for Trojan and Vless
@@ -53,5 +53,5 @@ Nodes:
         Provider: cloudflare # DNS cert provider, Get the full support list here: https://go-acme.github.io/lego/dns/
         Email: test@me.com
         DNSEnv: # DNS ENV option used by DNS provider
-          CLOUDFLARE_API_KEY: 
+          CLOUDFLARE_API_KEY:
           CLOUDFLARE_DNS_API_TOKEN:

@@ -1,0 +1,71 @@
+[
+  {
+    "tag": "GoNetflix",
+    "protocol": "vmess",
+    "streamSettings": {
+      "network": "ws",
+      "security": "tls",
+      "tlsSettings": {
+        "allowInsecure": false
+      },
+      "wsSettings": {
+        "path": "ws"
+      }
+    },
+    "mux": {
+      "enabled": true,
+      "concurrency": 8
+    },
+    "settings": {
+      "vnext": [
+        {
+          "address": "free-sg-01.gonetflix.xyz",
+          "port": 443,
+          "users": [
+            {
+              "id": "402d7490-6d4b-42d4-80ed-e681b0e6f1f9",
+              "security": "auto",
+              "alterId": 0
+            }
+          ]
+        }
+      ]
+    }
+  },
+ {
+      "protocol": "vmess",
+      "settings": {
+        "vnext": [
+          {
+            "address": "72.19.12.227",
+            "port": 2222,
+            "users": [
+              {
+                "alterId": 0,
+                "id": "28f38ea7-3955-33b8-8ea4-1ac2ad98bc53"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "none",
+        "wsSettings": {
+          "headers": {},
+          "path": "/xlovenf"
+        }
+      },
+      "tag": "72netflix"
+    },
+  {
+    "tag": "IPv4_out",
+    "protocol": "freedom",
+    "settings": {}
+  },
+  {
+    "protocol": "blackhole",
+    "settings": {},
+    "tag": "block"
+  }
+]

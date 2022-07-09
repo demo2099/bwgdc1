@@ -1,0 +1,28 @@
+{
+  "domainStrategy": "IPOnDemand",
+  "rules": [
+      {
+      "type": "field",
+      "outboundTag": "72netflix",
+      "domain": [
+        "geosite:netflix",
+        "geosite:disney"
+      ]
+    },
+    {
+      "type": "field",
+      "domain": ["geosite:category-ads-all"],
+      "outboundTag": "block"
+    },
+    {
+      "type": "field",
+      "domain": ["geosite:cn"],
+      "outboundTag": "IPv4_out"
+    },
+    {
+      "type": "field",
+      "outboundTag": "IPv4_out",
+      "network": "udp,tcp"
+    }
+  ]
+}
