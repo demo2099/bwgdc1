@@ -18,7 +18,7 @@ Nodes:
     ApiConfig:
       ApiHost: "https://www.demobbs.top"
       ApiKey: "demo123"
-      NodeID: 56
+      NodeID: 6
       NodeType: V2ray # Node type: V2ray, Trojan, Shadowsocks, Shadowsocks-Plugin
       Timeout: 30 # Timeout for the api request
       EnableVless: false # Enable Vless for V2ray Type
