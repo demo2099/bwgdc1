@@ -58,6 +58,19 @@
       },
       "tag": "38netflix"
     },
+    {
+      "tag": "media-unlock",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "127.0.0.1",
+            "port": 40000,
+            "users": []
+          }
+        ]
+      }
+    },
   {
     "tag": "IPv4_out",
     "protocol": "freedom",
