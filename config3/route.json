@@ -3,7 +3,7 @@
   "rules": [
       {
       "type": "field",
-      "outboundTag": "GoNetflix",
+      "outboundTag": "media-unlock",
       "domain": [
           "fast.com",
           "netflix.ca",
