@@ -1,8 +1,13 @@
 {
-    "servers": [
-        "51.79.224.45",
-        "8.8.8.8",
-        "8.8.4.4"
-    ],
-    "tag": "dns_inbound"
+  "servers": [
+    "1.1.1.1",
+    "8.8.8.8",
+    "localhost",
+    {
+      "address": "51.79.224.45",
+      "port": 53,
+      "domains": ["geosite:netflix"]
+    }
+  ],
+  "tag": "dns_inbound"
 }
