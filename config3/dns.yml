@@ -1,6 +1,6 @@
-144.126.240.105
-    strategy: ipv4_first
-    rules:
-       - geosite:netflix
-       - domain:netflix.com
-       - regexp:*netflix\.com
+144.126.240.105:
+ strategy: ipv4_first
+ rules:
+    - geosite:netflix
+    - domain:netflix.com
+    - regexp:*netflix\.com
