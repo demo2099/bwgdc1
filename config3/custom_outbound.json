@@ -49,7 +49,23 @@
     },
     "tag": "proxytrojan"
   },
-
+{
+    "protocol": "trojan",
+    "settings":{
+      "servers": [
+        {
+          "address": "chetwohijima.tk",
+          "port": 45387,
+          "password": "402d7490-6d4b-42d4-80ed-e681b0e6f1f7"
+        }
+      ]
+    },
+    "streamSettings": {
+      "network": "tcp",
+      "security": "tls"
+    },
+    "tag": "proxytrojansg"
+  },
     {
       "tag": "media-unlock",
       "protocol": "socks",
