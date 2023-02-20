@@ -32,32 +32,24 @@
         ]
       }
     },
- {
-      "protocol": "vmess",
-      "settings": {
-        "vnext": [
-          {
-            "address": "38.96.139.236",
-            "port": 2222,
-            "users": [
-              {
-                "alterId": 0,
-                "id": "402d7490-6d4b-42d4-80ed-e681b0e6f1f9"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "ws",
-        "security": "none",
-        "wsSettings": {
-          "headers": {},
-          "path": "/ylovenf"
+{
+    "protocol": "trojan",
+    "settings":{
+      "servers": [
+        {
+          "address": "vikytwotoo.ml",
+          "port": 54215,
+          "password": "402d7490-6d4b-42d4-80ed-e681b0e6f1f7"
         }
-      },
-      "tag": "38netflix"
+      ]
     },
+    "streamSettings": {
+      "network": "tcp",
+      "security": "tls"
+    },
+    "tag": "proxytrojan"
+  },
+
     {
       "tag": "media-unlock",
       "protocol": "socks",
