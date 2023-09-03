@@ -1,13 +1,13 @@
 version: '3'
 services: 
-  # xrayr: 
-  #   image: available2099/xrayplus:latest
-  #   container_name: xrayr1
-  #   volumes:
-  #     - ./config:/etc/XrayR/ # 映射配置文件夹
-  #     - /etc/v2ray-agent/tls/:/etc/v2ray-agent/tls/
-  #   restart: always
-  #   network_mode: host
+  xrayr: 
+    image: available2099/xrayplus:latest
+    container_name: xrayr1
+    volumes:
+      - ./config:/etc/XrayR/ # 映射配置文件夹
+      - /etc/v2ray-agent/tls/:/etc/v2ray-agent/tls/
+    restart: always
+    network_mode: host
   xrayr3:
     image: available2099/xrayplus:latest
     container_name: xrayr3
