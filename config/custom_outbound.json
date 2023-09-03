@@ -37,12 +37,12 @@
       "settings": {
         "vnext": [
           {
-            "address": "72.19.12.227",
-            "port": 2222,
+            "address": "8.219.161.107",
+            "port": 3333,
             "users": [
               {
                 "alterId": 0,
-                "id": "28f38ea7-3955-33b8-8ea4-1ac2ad98bc53"
+                "id": "402d7490-6d4b-42d4-80ed-e681b0e6f1f7"
               }
             ]
           }
@@ -53,10 +53,10 @@
         "security": "none",
         "wsSettings": {
           "headers": {},
-          "path": "/xlovenf"
+          "path": "/love"
         }
       },
-      "tag": "72netflix"
+      "tag": "sgnetflix"
     },
   {
     "tag": "IPv4_out",
