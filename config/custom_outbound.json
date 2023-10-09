@@ -1,34 +1,26 @@
 [
-  {
+    {
     "tag": "GoNetflix",
     "protocol": "vmess",
     "streamSettings": {
       "network": "ws",
-      "security": "tls",
-      "tlsSettings": {
-        "allowInsecure": false
-      },
       "wsSettings": {
-        "path": "ws"
+      "path": "/favicon.ico?t=personal&token=agfqiiezjd"
       }
-    },
-    "mux": {
-      "enabled": true,
-      "concurrency": 8
     },
     "settings": {
       "vnext": [
+      {
+        "address": "media-sg-vmess01.tanainai.net",
+        "port": 8880,
+        "users": [
         {
-          "address": "free-sg-01.gonetflix.xyz",
-          "port": 443,
-          "users": [
-            {
-              "id": "402d7490-6d4b-42d4-80ed-e681b0e6f1f9",
-              "security": "auto",
-              "alterId": 0
-            }
-          ]
+          "id": "FFFFFFFF-FFFF-FFFF-FFFF-FFFFFFFFFFFF",
+          "security": "none",
+          "alterId": 0
         }
+        ]
+      }
       ]
     }
   },
