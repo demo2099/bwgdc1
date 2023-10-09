@@ -1,34 +1,26 @@
 [
-  {
+    {
     "tag": "GoNetflix",
     "protocol": "vmess",
     "streamSettings": {
       "network": "ws",
-      "security": "tls",
-      "tlsSettings": {
-        "allowInsecure": false
-      },
       "wsSettings": {
-        "path": "ws"
+      "path": "/favicon.ico?t=personal&token=agfqiiezjd"
       }
-    },
-    "mux": {
-      "enabled": true,
-      "concurrency": 8
     },
     "settings": {
       "vnext": [
+      {
+        "address": "media-sg-vmess01.tanainai.net",
+        "port": 8880,
+        "users": [
         {
-          "address": "free-sg-01.gonetflix.xyz",
-          "port": 443,
-          "users": [
-            {
-              "id": "402d7490-6d4b-42d4-80ed-e681b0e6f1f9",
-              "security": "auto",
-              "alterId": 0
-            }
-          ]
+          "id": "FFFFFFFF-FFFF-FFFF-FFFF-FFFFFFFFFFFF",
+          "security": "none",
+          "alterId": 0
         }
+        ]
+      }
       ]
     }
   },
@@ -37,12 +29,12 @@
       "settings": {
         "vnext": [
           {
-            "address": "72.19.12.227",
-            "port": 2222,
+            "address": "8.219.161.107",
+            "port": 3333,
             "users": [
               {
                 "alterId": 0,
-                "id": "28f38ea7-3955-33b8-8ea4-1ac2ad98bc53"
+                "id": "402d7490-6d4b-42d4-80ed-e681b0e6f1f7"
               }
             ]
           }
@@ -53,10 +45,36 @@
         "security": "none",
         "wsSettings": {
           "headers": {},
-          "path": "/xlovenf"
+          "path": "/love"
         }
       },
-      "tag": "72netflix"
+      "tag": "SgNetflixOrigin"
+    },
+    {
+      "protocol": "vmess",
+      "settings": {
+        "vnext": [
+          {
+            "address": "8.219.161.107",
+            "port": 2222,
+            "users": [
+              {
+                "alterId": 0,
+                "id": "402d7490-6d4b-42d4-80ed-e681b0e6f1f7"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "none",
+        "wsSettings": {
+          "headers": {},
+          "path": "/love"
+        }
+      },
+      "tag": "SgNetflixDns"
     },
   {
     "tag": "IPv4_out",
