@@ -8,19 +8,3 @@ services:
       - /etc/v2ray-agent/tls/:/etc/v2ray-agent/tls/
     restart: always
     network_mode: host
-  xrayr2:
-    image: available2099/xraymax:v1
-    container_name: boardxrayrdns2
-    volumes:
-      - ./config2:/etc/XrayR/ # 映射配置文件夹
-      - /etc/v2ray-agent/tls/:/etc/v2ray-agent/tls/
-    restart: always
-    network_mode: host
-  xrayr3:
-    image: available2099/xraymax:v1
-    container_name: boardxrayrorigin
-    volumes:
-      - ./config3:/etc/XrayR/ # 映射配置文件夹
-      - /etc/v2ray-agent/tls/:/etc/v2ray-agent/tls/
-    restart: always
-    network_mode: host
