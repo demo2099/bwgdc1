@@ -1,4 +1,28 @@
-[
+[    {
+    "tag": "GoNetflixUS",
+    "protocol": "vmess",
+    "streamSettings": {
+      "network": "ws",
+      "wsSettings": {
+      "path": "/favicon.ico?t=personal&token=xhpdsmuzfv"
+      }
+    },
+    "settings": {
+      "vnext": [
+      {
+        "address": "media-us-vmess01.tanainai.net",
+        "port": 8880,
+        "users": [
+        {
+          "id": "FFFFFFFF-FFFF-FFFF-FFFF-FFFFFFFFFFFF",
+          "security": "none",
+          "alterId": 0
+        }
+        ]
+      }
+      ]
+    }
+  },
     {
     "tag": "GoNetflix",
     "protocol": "vmess",
