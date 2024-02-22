@@ -3,7 +3,7 @@
   "rules": [
       {
       "type": "field",
-      "outboundTag": "SgNetflixOrigin",
+      "outboundTag": "GoNetflixUS",
       "domain": [
              "amazon.com",
                 "awsstatic.com",
