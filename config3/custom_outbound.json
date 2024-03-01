@@ -112,7 +112,7 @@
             },
             "streamSettings": {
                 "network": "tcp",
-                "security": "tls"
+                "security": "none"
             },
             "tag": "trojantag"
         },
