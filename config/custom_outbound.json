@@ -51,6 +51,19 @@
       "tag": "SgNetflixOrigin"
     },
     {
+            "tag": "media-unlock",
+            "protocol": "socks",
+            "settings": {
+                "servers": [
+                    {
+                        "address": "172.17.0.2",
+                        "port": 40000,
+                        "users": []
+                    }
+                ]
+            }
+        },
+    {
       "protocol": "vmess",
       "settings": {
         "vnext": [
