@@ -81,6 +81,13 @@
     "protocol": "freedom",
     "settings": {}
   },
+      {
+      "tag":"IP6_out",
+      "protocol": "freedom",
+      "settings": {
+        "domainStrategy": "UseIPv6"
+      }
+    },
   {
     "protocol": "blackhole",
     "settings": {},
