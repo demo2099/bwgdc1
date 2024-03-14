@@ -56,7 +56,7 @@
             "settings": {
                 "servers": [
                     {
-                        "address": "172.17.0.2",
+                        "address": "172.18.0.2",
                         "port": 40000,
                         "users": []
                     }
