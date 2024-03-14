@@ -3,7 +3,7 @@
   "rules": [
       {
       "type": "field",
-      "outboundTag": "GoNetflix",
+      "outboundTag": "IP6_out",
       "domain": [
                           "amazon.com",
                 "awsstatic.com",
