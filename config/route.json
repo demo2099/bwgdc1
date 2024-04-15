@@ -8,7 +8,7 @@
     },
     {
       "type": "field",
-      "outboundTag": "IPv4_out",
+      "outboundTag": "GoNetflix",
       "network": "udp,tcp"
     }
   ]
