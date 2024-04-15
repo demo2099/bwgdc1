@@ -169,7 +169,20 @@
                 "thisispolaris.com",
                 "watchdisneyfe.com",
         "geosite:netflix",
-        "geosite:disney"
+        "geosite:disney",
+        "openai.com",
+        "chatgpt.com",
+        "cdn.auth0.com",
+        "azureedge.net",
+        "sentry.io",
+        "azurefd.net",
+        "intercomcdn.com",
+        "intercom.io",
+        "identrust.com",
+        "challenges.cloudflare.com",
+        "ai.com",
+        "oaistatic.com",
+        "oaiusercontent.com"
      
       ]
     },
