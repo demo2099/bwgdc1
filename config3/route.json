@@ -5,9 +5,6 @@
       "type": "field",
       "outboundTag": "GoNetflix",
       "domain": [
-                     "amazon.com",
-                "awsstatic.com",
-                "amazonaws.com",
                 "edgekey.net",
                 "edgesuite.net",
                 "edgecastcdn.net",
