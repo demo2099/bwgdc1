@@ -1,6 +1,6 @@
 {    "hosts": {
       "geosite:netflix": "138.2.81.71",
-      "geosite:disney": "138.2.81.71"
+      "geosite:disney": "38.181.73.139"
     },
   "servers": [
     "1.1.1.1",
