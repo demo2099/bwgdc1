@@ -5,11 +5,6 @@
       "type": "field",
       "domain": ["geosite:category-ads-all"],
       "outboundTag": "block"
-    },
-    {
-      "type": "field",
-      "outboundTag": "GoNetflix",
-      "network": "udp,tcp"
     }
   ]
 }
