@@ -1,25 +1,10 @@
 {
-"domainStrategy": "IPOnDemand",
-"rules": [
-
-{
-"type": "field",
-"domain": [
-"geosite:category-ads-all"
-],
-"outboundTag": "block"
-},
-{
-"type": "field",
-"domain": [
-"geosite:cn"
-],
-"outboundTag": "IPv4_out"
-},
-{
-"type": "field",
-"outboundTag": "IPv4_out",
-"network": "udp,tcp"
-}
-]
+  "domainStrategy": "IPOnDemand",
+  "rules": [
+    {
+      "type": "field",
+      "domain": ["geosite:category-ads-all"],
+      "outboundTag": "block"
+    }
+  ]
 }
