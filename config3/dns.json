@@ -1,13 +1,10 @@
-{
+{    "hosts": {
+      "geosite:netflix": "203.24.92.137"
+    },
   "servers": [
     "1.1.1.1",
     "8.8.8.8",
-    "localhost",
-    {
-      "address": "51.79.224.45",
-      "port": 53,
-      "domains": ["geosite:netflix"]
-    }
+    "localhost"
   ],
   "tag": "dns_inbound"
 }
