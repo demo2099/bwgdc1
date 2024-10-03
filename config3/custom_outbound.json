@@ -95,7 +95,7 @@
         "security": "none",
         "wsSettings": {
           "headers": {},
-          "path": "/love"
+          "path": "/lovenf"
         }
       },
       "tag": "SgNetflixDns"
