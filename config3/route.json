@@ -174,7 +174,7 @@
     },
           {
       "type": "field",
-      "outboundTag": "SgNetflixDns",
+      "outboundTag": "GoNetflix",
       "domain": [
                 "edgekey.net",
                 "edgesuite.net",
