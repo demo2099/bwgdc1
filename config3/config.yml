@@ -16,7 +16,7 @@ Nodes:
   -
     PanelType: "SSpanel" # Panel type: SSpanel, V2board, PMpanel, Proxypanel
     ApiConfig:
-      ApiHost: "http://www.demobbs.top"
+      ApiHost: "http://74.48.116.115:90"
       ApiKey: "demo123"
       NodeID: 10
       NodeType: V2ray # Node type: V2ray, Trojan, Shadowsocks, Shadowsocks-Plugin
