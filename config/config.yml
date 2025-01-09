@@ -18,7 +18,7 @@ Nodes:
     ApiConfig:
       ApiHost: "http://www.789258.xyz"
       ApiKey: "demo123"
-      NodeID: 185
+      NodeID: 183
       NodeType: Trojan # Node type: V2ray, Trojan, Shadowsocks, Shadowsocks-Plugin
       Timeout: 10 # Timeout for the api request
       EnableVless: false # Enable Vless for V2ray Type
