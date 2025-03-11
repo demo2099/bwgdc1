@@ -3,7 +3,7 @@
   "rules": [
       {
       "type": "field",
-      "outboundTag": "GoNetflix",
+      "outboundTag": "SgNetflixDns",
       "domain": [
                 "akadns.net",
                 "akam.net",
@@ -174,7 +174,7 @@
     },
           {
       "type": "field",
-      "outboundTag": "GoNetflix",
+      "outboundTag": "SgNetflixDns",
       "domain": [
                 "edgekey.net",
                 "edgesuite.net",
