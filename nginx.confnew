@@ -10,7 +10,7 @@ events {
 
 stream {
        server {
-        listen              371775 ssl;                    # 设置监听端口为443
+        listen              37175 ssl;                    # 设置监听端口为443
 
         ssl_protocols       TLSv1.2 TLSv1.3;      # 设置使用的SSL协议版本
 
